@@ -17,4 +17,5 @@ class Application(tornado.web.Application):
             static_path=os.path.join(os.path.dirname(__file__), "static"),
             xsrf_cookies=True,
         )
-        super().__init__(handlers, **settings)
+
+        return super().__init__(handlers, **settings)
